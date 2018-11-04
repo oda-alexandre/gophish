@@ -19,7 +19,7 @@
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de [gophish](https://gophish.io/) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/gophish/) public.
+Ce repository contient le fichier Dockerfile de [Gophish](https://gophish.io/) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/gophish/) public.
 
 
 ## PREREQUIS
@@ -33,7 +33,10 @@ Installer [Docker](https://www.docker.com)
 docker run -d --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish
 ```
 
-lien vers Gophish https://127.0.0.1:3333/login (ID = admin / PASSWORD = gophish)
+lien vers Gophish https://127.0.0.1:3333/login
+
+ID        = admin
+PASSWORD  = gophish
 
 
 ## LICENSE
