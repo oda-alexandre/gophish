@@ -9,6 +9,7 @@
 - [Introduction](#INTRODUCTION)
 - [Prerequis](#PREREQUIS)
 - [Installation](#INSTALLATION)
+- [Configuration](#CONFIGURATION)
 - [License](#LICENSE)
 
 
@@ -39,6 +40,14 @@ ID        = admin
 
 PASSWORD  = gophish
 
+
+## CONFIGURATION
+
+Pour creer une clef ssh pour la connexion TLS
+
+```
+sudo openssl req -newkey rsa:2048 -nodes -keyout gophish.key -x509 -days 365 -out gophish.crt
+```
 
 ## LICENSE
 
