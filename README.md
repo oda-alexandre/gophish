@@ -1,6 +1,6 @@
 # GOPHISH
 
-![gophish](https://raw.githubusercontent.com/oda-alexandre/gophish/master/logo-gophish.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/gophish/master/logo-docker.png)
+![gophish](https://raw.githubusercontent.com/oda-alexandre/gophish/master/img/logo-gophish.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/gophish/master/img/logo-docker.png)
 
 
 ## INDEX
