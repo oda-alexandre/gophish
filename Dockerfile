@@ -14,7 +14,7 @@ RUN wget https://github.com/gophish/gophish/releases/download/v0.5.0/gophish-v0.
 unzip gophish-v0.5.0-linux-64bit.zip && \
 rm -f gophish-v0.5.0-linux-64bit.zip
 
-RUN sed -i "s|127.0.0.1|0.0.0.0|g" config.json && \
+RUN sed -i 's|127.0.0.1|0.0.0.0|g' config.json && \
 chmod +x gophish
 
 RUN useradd -d /home/gophish -m gophish && \
