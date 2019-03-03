@@ -1,6 +1,11 @@
 FROM debian:stretch-slim
 
-MAINTAINER https://oda-alexandre.github.io
+MAINTAINER https://oda-alexandre.com
+
+# VARIABLES
+ENV USER gophish
+ENV VERSION v0.5.0
+ENV DEBIAN_FRONTEND noninteractive
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install --no-install-recommends -y \
@@ -13,19 +18,19 @@ sudo
 WORKDIR /opt/gophish
 
 # INSTALLATION DE L'APPLICATION
-RUN wget https://github.com/gophish/gophish/releases/download/v0.5.0/gophish-v0.5.0-linux-64bit.zip && \
-unzip gophish-v0.5.0-linux-64bit.zip && \
-rm -f gophish-v0.5.0-linux-64bit.zip && \
+RUN wget https://github.com/gophish/gophish/releases/download/${VERSION}/gophish-${VERSION}-linux-64bit.zip && \
+unzip gophish-${VERSION}-linux-64bit.zip && \
+rm -f gophish-${VERSION}-linux-64bit.zip && \
 sed -i 's|127.0.0.1|0.0.0.0|g' config.json && \
-chmod +x gophish
+chmod +x gophish && \
 
 # AJOUT UTILISATEUR
-RUN useradd -d /home/gophish -m gophish && \
-passwd -d gophish && \
-adduser gophish sudo
+useradd -d /home/${USER} -m ${USER} && \
+passwd -d ${USER} && \
+adduser ${USER} sudo
 
 # SELECTION UTILISATEUR
-USER gophish
+USER ${USER}
 
 # NETTOYAGE
 RUN sudo apt-get --purge autoremove -y \
