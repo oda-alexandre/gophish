@@ -42,7 +42,7 @@ sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
-# EXPOSITION PORT
+# OUVERTURE DE PORTS
 EXPOSE ${PORTS}
 
 # COMMANDE AU DEMARRAGE DU CONTENEUR
