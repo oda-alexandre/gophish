@@ -5,6 +5,7 @@ MAINTAINER https://oda-alexandre.com
 # VARIABLES
 ENV USER gophish
 ENV VERSION v0.5.0
+ENV PORTS 3333 80
 ENV DEBIAN_FRONTEND noninteractive
 
 # INSTALLATION DES PREREQUIS
@@ -42,7 +43,7 @@ sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
 # EXPOSITION PORT
-EXPOSE 3333 80
+EXPOSE ${PORTS}
 
 # COMMANDE AU DEMARRAGE DU CONTENEUR
 ENTRYPOINT sudo ./gophish
