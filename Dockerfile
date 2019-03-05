@@ -3,9 +3,9 @@ FROM debian:stretch-slim
 MAINTAINER https://oda-alexandre.com
 
 # VARIABLES
-ENV USER gophish
-ENV VERSION v0.5.0
-ENV DEBIAN_FRONTEND noninteractive
+ENV USER gophish \
+VERSION v0.5.0 \
+DEBIAN_FRONTEND noninteractive
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install --no-install-recommends -y \
