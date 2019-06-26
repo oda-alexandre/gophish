@@ -1,6 +1,6 @@
 # GOPHISH
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/gophish)](https://hub.docker.com/r/alexandreoda/gophish)
+<img src="https://getgophish.com/blog/images/gophish_purple_logo.png" />
 
 
 ## INDEX
@@ -14,10 +14,7 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/gophish.svg)](https://microbadger.com/images/alexandreoda/gophish)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/gophish.svg)](https://microbadger.com/images/alexandreoda/gophish")
-[![build](https://img.shields.io/docker/build/alexandreoda/gophish.svg)](https://hub.docker.com/r/alexandreoda/gophish)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/gophish.svg)](https://hub.docker.com/r/alexandreoda/gophish)
+[![pipeline status](https://gitlab.com/oda-alexandre/gophish/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/gophish/commits/master)
 
 
 ## INTRODUCTION
