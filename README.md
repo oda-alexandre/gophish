@@ -43,7 +43,7 @@ Use [docker](https://www.docker.com)
 docker run -d --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish
 ```
 
-lien vers Gophish https://127.0.0.1:3333/login
+link to Gophish https://127.0.0.1:3333/login
 
 ID        = admin
 
