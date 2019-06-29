@@ -1,5 +1,7 @@
+# IMAGE TO USE
 FROM debian:stretch-slim
 
+# MAINTAINER
 MAINTAINER https://www.oda-alexandre.com/
 
 # VARIABLES
@@ -8,32 +10,32 @@ ENV VERSION v0.5.0
 ENV PORTS 3333 80
 ENV DEBIAN_FRONTEND noninteractive
 
-# INSTALLATION DES PREREQUIS
+# INSTALL PACKAGES
 RUN apt-get update && apt-get install --no-install-recommends -y \
 ca-certificates \
 wget \
 unzip \
 sudo
 
-# SELECTION DE L'ESPACE DE TRAVAIL
+# SELECT WORKING SPACE
 WORKDIR /opt/gophish
 
-# INSTALLATION DE L'APPLICATION
+# INSTALL APP
 RUN wget https://github.com/gophish/gophish/releases/download/${VERSION}/gophish-${VERSION}-linux-64bit.zip && \
 unzip gophish-${VERSION}-linux-64bit.zip && \
 rm -f gophish-${VERSION}-linux-64bit.zip && \
 sed -i 's|127.0.0.1|0.0.0.0|g' config.json && \
 chmod +x gophish && \
 
-# AJOUT UTILISATEUR
+# ADD USER
 useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
 adduser ${USER} sudo
 
-# SELECTION UTILISATEUR
+# SELECT USER
 USER ${USER}
 
-# NETTOYAGE
+# CLEANING
 RUN sudo apt-get --purge autoremove -y \
 wget \
 unzip && \
@@ -42,8 +44,8 @@ sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
-# OUVERTURE DE PORTS
+# OPENING PORTS
 EXPOSE ${PORTS}
 
-# COMMANDE AU DEMARRAGE DU CONTENEUR
-ENTRYPOINT sudo ./gophish
+# START THE CONTAINER
+ENTRYPOINT sudo ./gophish \
