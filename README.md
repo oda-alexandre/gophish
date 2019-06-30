@@ -1,6 +1,6 @@
 # GOPHISH
 
-<img src="https://getgophish.com/blog/images/gophish_purple_logo.png" />
+<img src="https://getgophish.com/blog/images/gophish_purple_logo.png" width="200" height="200"/>
 
 
 ## INDEX
