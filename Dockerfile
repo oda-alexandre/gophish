@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-LABEL authors="https://www.oda-alexandre.com/"
+LABEL authors https://www.oda-alexandre.com/
 
 ENV USER gophish
 ENV VERSION v0.5.0
