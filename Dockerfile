@@ -1,14 +1,13 @@
 FROM debian:stretch-slim
 
-MAINTAINER https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com/
 
 ENV USER gophish
 ENV VERSION v0.5.0
-ENV PORTS 3333 80
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
-apt-get update && apt-get install --no-install-recommends -y \
+apt update && apt install --no-install-recommends -y \
 ca-certificates \
 wget \
 unzip \
@@ -42,7 +41,7 @@ sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
 RUN echo -e '\033[36;1m ******* OPENING PORTS ******** \033[0m'
-EXPOSE ${PORTS}
+EXPOSE 3333 80
 
 RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
 ENTRYPOINT sudo ./gophish \
