@@ -1,6 +1,6 @@
 # GOPHISH
 
-<img src="https://getgophish.com/blog/images/gophish_purple_logo.png" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904449/0_G63TdmdAOJr5zdWM.png" width="200" height="200"/>
 
 ## INDEX
 
