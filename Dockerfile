@@ -12,13 +12,7 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   ca-certificates \
   wget \
   unzip \
-  sudo \
-  && \
-  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
-  apt-get --purge autoremove -y && \
-  apt-get autoclean -y && \
-  rm /etc/apt/sources.list && \
-  rm -rf /var/cache/apt/archives/* && \
+  sudo && \
   rm -rf /var/lib/apt/lists/*
   
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
@@ -29,8 +23,8 @@ RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
   unzip gophish-${VERSION}-linux-64bit.zip && \
   sed -i 's|127.0.0.1|0.0.0.0|g' config.json && \
   chmod +x gophish && \
-  sudo apt-get --purge autoremove -y wget unzip && \
-  rm -f gophish-${VERSION}-linux-64bit.zip
+  rm -f gophish-${VERSION}-linux-64bit.zip && \
+  sudo apt-get --purge autoremove -y wget unzip
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
