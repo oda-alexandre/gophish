@@ -4,20 +4,15 @@ LABEL authors https://www.oda-alexandre.com
 
 ENV USER gophish
 ENV HOME /home/${USER}
-ENV LOCALES fr_FR.UTF-8
 ENV VERSION v0.5.0
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install --no-install-recommends -y \
-  locales \
   ca-certificates \
   wget \
   unzip \
   sudo
-
-RUN echo -e '\033[36;1m ******* CHANGE LOCALES ******** \033[0m' && \
-  locale-gen ${LOCALES}
   
 RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR /opt/gophish
