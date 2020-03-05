@@ -41,7 +41,12 @@ Use [docker](https://www.docker.com)
 ### DOCKER RUN
 
 ```\
-docker  run -d --rm --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish
+docker run -d --rm \
+--name gophish \
+-p 443:443 \
+-p 80:80 \
+-p 127.0.0.1:3333:3333 \
+alexandreoda/gophish
 ```
 
 link to Gophish <https://127.0.0.1:3333/login>
