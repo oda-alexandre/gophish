@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  gophish:
+    container_name: gophish
+    image: alexandreoda/gophish
+    privileged: false
+    ports:
+      - "443"
+      - "80"
+      - "3333"

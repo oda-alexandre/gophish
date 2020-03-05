@@ -10,6 +10,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -24,7 +26,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/gophish/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/gophish/pipelines)
 
 Automatically updated on :
 
@@ -36,13 +38,32 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -d --rm --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish```
+### DOCKER RUN
+
+```docker run -d --rm --name gophish -p 127.0.0.1:3333:3333 -p 80:80 alexandreoda/gophish
+```
 
 link to Gophish <https://127.0.0.1:3333/login>
 
 ID        = admin
 
 PASSWORD  = gophish
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  gophish:
+    container_name: gophish
+    image: alexandreoda/gophish
+    privileged: false
+    ports:
+      - "443"
+      - "80"
+      - "3333"
+```
 
 ## LICENSE
 
