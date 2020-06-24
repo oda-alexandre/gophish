@@ -2,8 +2,6 @@
 
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904449/0_G63TdmdAOJr5zdWM.png)
 
-## INDEX
-
 - [GOPHISH](#gophish)
   - [INDEX](#index)
   - [BADGES](#badges)
@@ -36,7 +34,7 @@ Automatically updated on :
 
 Use [docker](https://www.docker.com)
 
-## INSTALL
+## BUILD
 
 ### DOCKER RUN
 
